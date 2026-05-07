@@ -259,31 +259,10 @@ function handleHash(){
   navigate(page,{id});
 }
 
-/* ============ HOME: HERO LETTERS / STARS / PARALLAX ============ */
+/* ============ HOME: HERO INIT (animations stripped) ============ */
 function initHomeHero(){
-  const mt = document.getElementById('megaTitle');
-  if(mt && !mt.dataset.done){
-    const word = mt.textContent;
-    mt.innerHTML = '';
-    [...word].forEach((c,i)=>{
-      const s = document.createElement('span');
-      s.className='ch'; s.textContent=c;
-      s.style.animationDelay = (0.25+i*0.07)+'s';
-      mt.appendChild(s);
-    });
-    mt.dataset.done='1';
-  }
-  const stars = document.getElementById('stars');
-  if(stars && !stars.children.length){
-    for(let i=0;i<60;i++){
-      const s = document.createElement('div');
-      s.className='star';
-      s.style.left = Math.random()*100+'%';
-      s.style.top = Math.random()*55+'%';
-      s.style.animationDelay = (Math.random()*4)+'s';
-      stars.appendChild(s);
-    }
-  }
+  // Decorative animations removed (twinkling stars, letter-by-letter title)
+  // for a more restrained, editorial feel.
 }
 
 function initSearchFields(){
@@ -314,12 +293,7 @@ function initSearchFields(){
 /* ============ NAV SCROLL ============ */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll',()=>{
-  const y = window.scrollY;
-  nav.classList.toggle('scrolled', y>80);
-  const heroImg = document.getElementById('heroImg');
-  const heroMtn = document.getElementById('heroMtn');
-  if(heroImg) heroImg.style.transform = `translateY(${y*0.25}px) scale(${1+y*0.0003})`;
-  if(heroMtn) heroMtn.style.transform = `translateY(${y*-0.12}px)`;
+  nav.classList.toggle('scrolled', window.scrollY>80);
 });
 
 /* ============ ANNOUNCEMENT BANNER ============ */
@@ -566,7 +540,7 @@ function renderProduct(){
       </button>
       <a class="pdp-back" onclick="navigate('shop')">← Back to Shop</a>
       <div class="pdp-trust">
-        <span>🔒 Secure Booking</span><span>✈️ Instant Confirmation</span><span>💬 24/7 Support</span>
+        <span>Secure booking</span><span>·</span><span>Instant confirmation</span><span>·</span><span>24/7 support</span>
       </div>
     </div>`;
   renderPdpTab();
@@ -861,7 +835,7 @@ function renderCart(){
         </div>
         <div class="cs-divider"></div>
         <div class="cs-total"><span>Subtotal</span><b>$${subtotal.toFixed(2)}</b></div>
-        <div class="cs-info">💬 Our team will contact you within 24 hours to confirm your booking and arrange next steps.</div>
+        <div class="cs-info">Our team will contact you within 24 hours to confirm your booking and arrange next steps.</div>
         <button class="cs-btn" onclick="openCartCheckout()">Request Booking</button>
         <p class="cs-note">No payment taken here. Our team handles all booking details by email.</p>
       </div>
@@ -1000,17 +974,8 @@ function saveStepData(){
   return true;
 }
 
-function bookRipple(e){
-  const b = e.currentTarget;
-  const r = b.getBoundingClientRect();
-  const span = document.createElement('span');
-  span.className = 'ripple';
-  const size = Math.max(r.width, r.height);
-  span.style.width = span.style.height = size+'px';
-  span.style.left = (e.clientX - r.left - size/2)+'px';
-  span.style.top = (e.clientY - r.top - size/2)+'px';
-  b.appendChild(span);
-  setTimeout(()=>span.remove(), 650);
+function bookRipple(){
+  // Ripple removed; relying on subtle CSS hover instead.
 }
 
 /* ============ CONNECT FORM ============ */
