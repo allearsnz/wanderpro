@@ -63,7 +63,7 @@ const PRODUCTS = [
     longDesc:"For those who can't choose between snorkeling, sunbathing, and sailing — this is the answer. A 8-hour full-day tour covering multiple sea caves, two uninhabited islands, four swimming stops, and a freshly prepared seafood lunch in a sheltered cove. One boat, one day, everything included. This tour sells out weeks in advance in summer.",
     included:["Full 8-hour guided boat tour","All snorkel gear included","Freshly prepared seafood lunch","4 swimming stops","2 island visits","Sea cave exploration"] },
 
-  { id:12, name:"Boat Tour to Mljet National Park & 3 Islands", price:156.75, category:"experience", region:"Europe", filter:"med", imgId:"photo-1555990793-da11153b6523", stars:4.8, reviews:267, days:1, group:"Up to 10",
+  { id:12, name:"Boat Tour to Mljet National Park & 3 Islands", price:156.75, category:"experience", region:"Europe", filter:"med", imgId:"photo-1473221326025-9183b464bb7e", stars:4.8, reviews:267, days:1, group:"Up to 10",
     shortDesc:"Explore Croatia's most pristine national park by boat. Ancient salt lakes, three stunning islands, and emerald Adriatic bays in one unforgettable day.",
     longDesc:"Mljet is Croatia's best-kept secret — a densely forested island with two saltwater lakes connected to the sea, home to a 12th-century Benedictine monastery on its own islet. Your boat calls at Mljet, Koločep, and Šipan, pausing at the monastery, a rope swing into the blue lake, and a family-run konoba for grilled fish.",
     included:["Mljet National Park entry fee","Guided boat tour from Dubrovnik","Swimming stops at all 3 islands","Lunch at local konoba restaurant","English-speaking skipper"] },
@@ -385,17 +385,7 @@ function renderHomePackages(filter='all'){
   const list = filter==='all'
     ? [9,12,5,13,6,8].map(id=>PRODUCTS.find(p=>p.id===id))
     : PRODUCTS.filter(p=>p.filter===filter && p.category==='experience').slice(0,6);
-  grid.innerHTML = '';
-  list.forEach((p,i)=>{
-    const wrap = document.createElement('div');
-    wrap.style.opacity='0'; wrap.style.transform='translateY(20px)';
-    wrap.innerHTML = pkgCardHTML(p);
-    grid.appendChild(wrap.firstElementChild);
-    setTimeout(()=>{
-      const el = grid.children[i];
-      if(el){ el.style.transition='all .5s ease'; el.style.opacity='1'; el.style.transform='none'; }
-    }, i*70);
-  });
+  grid.innerHTML = list.map(pkgCardHTML).join('');
 }
 
 function initHomeTabs(){
