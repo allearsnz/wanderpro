@@ -1,5 +1,5 @@
 /* ================================================================
-   WANDERPRO LLC — APP LOGIC
+   WANDERPRO LLC: APP LOGIC
    Products, articles, routing, cart, modal, all renderers.
    ================================================================ */
 
@@ -10,7 +10,7 @@ const img = (id, w=700, h=500) => `${IMG_BASE}${id}?w=${w}&h=${h}&fit=crop&q=80`
 const PRODUCTS = [
   { id:1, name:"Half Day iSimangaliso Boat Safari Tour To Richards Bay", price:280.93, category:"experience", region:"Africa", filter:"safari", imgId:"photo-1544551763-46a013bb70d5", stars:4.9, reviews:312, days:1, group:"Up to 12",
     shortDesc:"Explore the UNESCO World Heritage iSimangaliso Wetland Park by boat. Spot hippos, crocodiles, and exotic birdlife on this unforgettable half-day safari from Richards Bay.",
-    longDesc:"Launch from Richards Bay into the iSimangaliso Wetland Park — Africa's oldest protected wilderness and a UNESCO World Heritage Site. Your experienced guide will navigate through channels teeming with hippos, crocodiles, and over 500 bird species. The estuary's glassy waters reflect the ancient tree line as you drift past waterbuck and elephant on the banks. A morning you will not forget.",
+    longDesc:"Launch from Richards Bay into the iSimangaliso Wetland Park, Africa's oldest protected wilderness and a UNESCO World Heritage Site. Your experienced guide will navigate through channels teeming with hippos, crocodiles, and over 500 bird species. The estuary's glassy waters reflect the ancient tree line as you drift past waterbuck and elephant on the banks. A morning you will not forget.",
     included:["Professional wildlife guide","Safety equipment & life jackets","Hotel pickup available","Bottled water & snacks","National park entry fee"] },
 
   { id:2, name:"Miami Lights Private Nighttime Boat Tour", price:295.00, category:"experience", region:"USA", filter:"coast", imgId:"photo-1503891450247-ee5f8ec46dc3", stars:4.7, reviews:248, days:1, group:"Up to 6",
@@ -19,13 +19,13 @@ const PRODUCTS = [
     included:["Private boat for up to 6 guests","Licensed and insured captain","Complimentary champagne","2-hour city lights narrated tour","South Beach & Star Island route"] },
 
   { id:3, name:"Boat Tour – Snorkeling with Turtles or Whale Watching, Family of 3", price:543.42, category:"experience", region:"USA", filter:"tropic", imgId:"photo-1559494007-9f5847c49d94", stars:4.8, reviews:189, days:1, group:"Family of 3",
-    shortDesc:"A family adventure combining snorkeling with sea turtles and whale watching in crystal clear waters — perfect for families with children of all ages.",
-    longDesc:"This full-day family adventure packs in two of the ocean's greatest encounters. Morning snorkeling with wild sea turtles in shallow protected reef waters — bring your own camera for unforgettable close-ups. Then a whale watching cruise with a marine biologist narrating every breach and blow. Gear provided. Children welcome from age 5.",
+    shortDesc:"A family adventure combining snorkeling with sea turtles and whale watching in crystal clear waters. Perfect for families with children of all ages.",
+    longDesc:"This full-day family adventure packs in two of the ocean's greatest encounters. Morning snorkeling with wild sea turtles in shallow protected reef waters. Bring your own camera for unforgettable close-ups. Then a whale watching cruise with a marine biologist narrating every breach and blow. Gear provided. Children welcome from age 5.",
     included:["Snorkel gear for all 3 (all sizes)","Coast Guard certified vessel","Marine biologist onboard guide","Underwater photography package","Light snacks and water throughout"] },
 
   { id:4, name:"Boat Tour from Orlando – Snorkel and Swim with Manatees, Couple", price:318.00, category:"experience", region:"USA", filter:"coast", imgId:"photo-1500370010411-c01200a7e712", stars:4.9, reviews:421, days:1, group:"Couple",
     shortDesc:"Swim alongside gentle manatees in their natural habitat on this intimate couple's experience departing from Orlando into Florida's crystal spring rivers.",
-    longDesc:"Crystal River's 72°F spring-fed waters are home to the world's largest population of West Indian manatees. On this private couple's tour, you'll don a wetsuit and snorkel into Kings Bay where manatees congregate year-round. No crowds — maximum 2 guests. Your certified in-water guide will introduce you to the gentle giants up close.",
+    longDesc:"Crystal River's 72°F spring-fed waters are home to the world's largest population of West Indian manatees. On this private couple's tour, you'll don a wetsuit and snorkel into Kings Bay where manatees congregate year-round. No crowds, maximum 2 guests. Your certified in-water guide will introduce you to the gentle giants up close.",
     included:["Wetsuit and snorkel gear for 2","Certified dive guide (in water with you)","National Wildlife Refuge permit","Round-trip transport from Orlando","Underwater camera rental available"] },
 
   { id:5, name:"Boat Tour in Vestmannaeyjar", price:103.34, category:"experience", region:"Scandinavia", filter:"arctic", imgId:"photo-1568430462989-44163eb1752f", stars:4.9, reviews:376, days:1, group:"Up to 14",
@@ -35,12 +35,12 @@ const PRODUCTS = [
 
   { id:6, name:"Boat Tour of the Artistic Beauties of Venice, Family of 4", price:136.00, category:"experience", region:"Europe", filter:"med", imgId:"photo-1514890547357-a9ee288728e0", stars:4.8, reviews:204, days:1, group:"Family of 4",
     shortDesc:"Glide through Venice's iconic canals on a private family tour past Renaissance palaces, hidden bridges, and centuries-old churches unavailable by foot.",
-    longDesc:"Venice's real secrets are not on foot — they're on water. Your private bragozzo-style wooden boat navigates canals too narrow for tourist ferries, pulling alongside palazzos whose foundations have been kissed by the lagoon for 800 years. Your English-speaking guide narrates the history of each bridge and building as your family drifts through the world's most extraordinary floating city.",
+    longDesc:"Venice's real secrets are not on foot. They're on water. Your private bragozzo-style wooden boat navigates canals too narrow for tourist ferries, pulling alongside palazzos whose foundations have been kissed by the lagoon for 800 years. Your English-speaking guide narrates the history of each bridge and building as your family drifts through the world's most extraordinary floating city.",
     included:["Private wooden boat for family of 4","English-speaking historian guide","Canal Grande route + hidden canals","Flexible 2-hour schedule","Rialto and Santa Maria della Salute stops"] },
 
   { id:7, name:"Boat Tour to the Vineyards with Wine Tasting from Barcelona, Family of 3", price:459.00, category:"experience", region:"Europe", filter:"med", imgId:"photo-1539037116277-4db20889f2d4", stars:4.7, reviews:156, days:1, group:"Family of 3",
-    shortDesc:"Sail from Barcelona to Penedès wine country for an exclusive vineyard tour and premium tasting — a sophisticated family outing along Catalonia's golden coast.",
-    longDesc:"Depart Barcelona's Port Olímpic aboard a sleek sailing catamaran bound for the Penedès wine appellation — home to 95% of Spain's cava production. After a scenic coastal passage, you'll transfer by private car to a family-run bodega for a guided vineyard walk and a 5-wine tasting paired with local charcuterie. Return as the sun drops behind Montjuïc.",
+    shortDesc:"Sail from Barcelona to Penedès wine country for an exclusive vineyard tour and premium tasting. A sophisticated family outing along Catalonia's golden coast.",
+    longDesc:"Depart Barcelona's Port Olímpic aboard a sleek sailing catamaran bound for the Penedès wine appellation, home to 95% of Spain's cava production. After a scenic coastal passage, you'll transfer by private car to a family-run bodega for a guided vineyard walk and a 5-wine tasting paired with local charcuterie. Return as the sun drops behind Montjuïc.",
     included:["Catamaran transfer to vineyard","Guided winery tour with sommelier","5-wine tasting with charcuterie board","Vegetarian options available","Return sailing journey with sunset views"] },
 
   { id:8, name:"Hells Canyon Kirkwood Jet Boat Tour near Boise, Idaho", price:218.36, category:"experience", region:"USA", filter:"coast", imgId:"photo-1506905925346-21bda4d32df4", stars:4.9, reviews:304, days:1, group:"Up to 10",
@@ -49,8 +49,8 @@ const PRODUCTS = [
     included:["Full-day jet boat tour","Experienced licensed captain","Wildlife spotting stops (deer, elk, osprey)","Lunch at Kirkwood Bar ranch","All safety equipment included"] },
 
   { id:9, name:"Whale Watching RIB Boat Tour in Skjervoy from Tromso", price:293.95, category:"experience", region:"Scandinavia", filter:"arctic", imgId:"photo-1531366936337-7c912a4589a7", stars:4.9, reviews:512, days:1, group:"Up to 12",
-    shortDesc:"Witness humpback and sperm whales in Arctic Norwegian waters on a high-speed RIB from Skjervøy — one of the world's premier winter whale watching grounds.",
-    longDesc:"From November to February, billions of Norwegian spring herring concentrate in the fjords north of Tromsø — and the whales follow. Humpbacks bubble-net feed in groups of up to 30. Orcas herd silver columns of fish into bait balls. Your RIB boat puts you within metres of the action, and your marine biologist identifies each individual by fluke markings.",
+    shortDesc:"Witness humpback and sperm whales in Arctic Norwegian waters on a high-speed RIB from Skjervøy, one of the world's premier winter whale watching grounds.",
+    longDesc:"From November to February, billions of Norwegian spring herring concentrate in the fjords north of Tromsø, and the whales follow. Humpbacks bubble-net feed in groups of up to 30. Orcas herd silver columns of fish into bait balls. Your RIB boat puts you within metres of the action, and your marine biologist identifies each individual by fluke markings.",
     included:["High-speed RIB boat","Full dry suit provided","Marine biologist guide","Hot chocolate and snacks","Photo stops and ID charts"] },
 
   { id:10, name:"Boat Tour, Captain & Champagne", price:375.00, category:"experience", region:"Europe", filter:"med", imgId:"photo-1530126483408-aa533e55bdb2", stars:4.8, reviews:178, days:1, group:"Up to 6",
@@ -59,13 +59,13 @@ const PRODUCTS = [
     included:["3-hour private charter","Licensed captain","Bottle of champagne on arrival","Flexible route to your preference","Swimming stops at your request","Up to 6 guests"] },
 
   { id:11, name:"Boat Tour All in One", price:190.00, category:"experience", region:"Europe", filter:"med", imgId:"photo-1505118380757-91f5f5632de0", stars:4.6, reviews:143, days:1, group:"Up to 12",
-    shortDesc:"The complete coastal experience — snorkeling, island hopping, swimming stops, and scenic sailing all packed into one epic full-day Mediterranean tour.",
-    longDesc:"For those who can't choose between snorkeling, sunbathing, and sailing — this is the answer. A 8-hour full-day tour covering multiple sea caves, two uninhabited islands, four swimming stops, and a freshly prepared seafood lunch in a sheltered cove. One boat, one day, everything included. This tour sells out weeks in advance in summer.",
+    shortDesc:"The complete coastal experience: snorkeling, island hopping, swimming stops, and scenic sailing all packed into one epic full-day Mediterranean tour.",
+    longDesc:"For those who can't choose between snorkeling, sunbathing, and sailing, this is the answer. A 8-hour full-day tour covering multiple sea caves, two uninhabited islands, four swimming stops, and a freshly prepared seafood lunch in a sheltered cove. One boat, one day, everything included. This tour sells out weeks in advance in summer.",
     included:["Full 8-hour guided boat tour","All snorkel gear included","Freshly prepared seafood lunch","4 swimming stops","2 island visits","Sea cave exploration"] },
 
   { id:12, name:"Boat Tour to Mljet National Park & 3 Islands", price:156.75, category:"experience", region:"Europe", filter:"med", imgId:"photo-1473221326025-9183b464bb7e", stars:4.8, reviews:267, days:1, group:"Up to 10",
     shortDesc:"Explore Croatia's most pristine national park by boat. Ancient salt lakes, three stunning islands, and emerald Adriatic bays in one unforgettable day.",
-    longDesc:"Mljet is Croatia's best-kept secret — a densely forested island with two saltwater lakes connected to the sea, home to a 12th-century Benedictine monastery on its own islet. Your boat calls at Mljet, Koločep, and Šipan, pausing at the monastery, a rope swing into the blue lake, and a family-run konoba for grilled fish.",
+    longDesc:"Mljet is Croatia's best-kept secret: a densely forested island with two saltwater lakes connected to the sea, home to a 12th-century Benedictine monastery on its own islet. Your boat calls at Mljet, Koločep, and Šipan, pausing at the monastery, a rope swing into the blue lake, and a family-run konoba for grilled fish.",
     included:["Mljet National Park entry fee","Guided boat tour from Dubrovnik","Swimming stops at all 3 islands","Lunch at local konoba restaurant","English-speaking skipper"] },
 
   { id:13, name:"Boat Tour – Exotic Caves with Snorkel from Playas del Coco", price:135.00, category:"experience", region:"Latin America", filter:"tropic", imgId:"photo-1559494007-9f5847c49d94", stars:4.7, reviews:134, days:1, group:"Up to 12",
@@ -74,17 +74,17 @@ const PRODUCTS = [
     included:["Snorkel mask, fins, and vest","Bilingual guide","Sea cave exploration","Fresh fruit and water","Life jacket and safety briefing"] },
 
   { id:14, name:"\"Todo Glaciares\" Boat Tour + Transfers from El Calafate", price:205.00, category:"experience", region:"Latin America", filter:"tropic", imgId:"photo-1470770841072-f978cf4d019e", stars:4.9, reviews:289, days:1, group:"Up to 80",
-    shortDesc:"Sail through Patagonia's Los Glaciares National Park face to face with the Perito Moreno and Upsala glaciers — an experience that stops time.",
-    longDesc:"Stand at the bow as walls of ancient blue ice rise 70 metres above the waterline. The Perito Moreno calves skyscraper-sized blocks into Lago Argentino with a sound like artillery. The Upsala Glacier is quieter — ancient, massive, and slowly retreating. Your naturalist guide contextualises what you're seeing against the backdrop of Andean climate science.",
+    shortDesc:"Sail through Patagonia's Los Glaciares National Park face to face with the Perito Moreno and Upsala glaciers. An experience that stops time.",
+    longDesc:"Stand at the bow as walls of ancient blue ice rise 70 metres above the waterline. The Perito Moreno calves skyscraper-sized blocks into Lago Argentino with a sound like artillery. The Upsala Glacier is quieter: ancient, massive, and slowly retreating. Your naturalist guide contextualises what you're seeing against the backdrop of Andean climate science.",
     included:["Full navigation through both glaciers","Return transfer from El Calafate","Los Glaciares National Park entry","Expert naturalist guide","Hot drinks onboard throughout"] },
 
   { id:15, name:"Boat Tour Experience – Sea Life Up Close", price:280.00, category:"experience", region:"USA", filter:"coast", imgId:"photo-1583212292454-1fe6229603b7", stars:4.7, reviews:198, days:1, group:"Up to 30",
-    shortDesc:"Get closer to ocean wildlife than you ever thought possible. Dolphins, sea lions, seabirds, and occasional whales — all in their natural environment.",
+    shortDesc:"Get closer to ocean wildlife than you ever thought possible. Dolphins, sea lions, seabirds, and occasional whales, all in their natural environment.",
     longDesc:"Departing from a Northern California harbor, this semi-submersible vessel has an underwater viewing gallery at the waterline, giving you eye-level access to kelp forest ecosystems and marine megafauna without getting wet. Above deck, your marine ecologist calls out species and behaviors as the boat idles through protected waters.",
     included:["Underwater viewing gallery access","Marine ecologist narration","Binoculars provided","90-minute tour","Photo package available on request"] },
 
   { id:16, name:"Boat Tour in the La Maddalena Archipelago From Palau", price:268.00, category:"experience", region:"Europe", filter:"med", imgId:"photo-1570077188670-e3a8d69ac5ff", stars:4.8, reviews:221, days:1, group:"Up to 10",
-    shortDesc:"Cruise through Sardinia's La Maddalena archipelago — a paradise of turquoise lagoons, pink granite rocks, and pristine white sand beaches reachable only by boat.",
+    shortDesc:"Cruise through Sardinia's La Maddalena archipelago, a paradise of turquoise lagoons, pink granite rocks, and pristine white sand beaches reachable only by boat.",
     longDesc:"Seven major islands and dozens of islets make up La Maddalena, once a NATO submarine base and now one of the Mediterranean's most protected marine parks. Your skipper threads between pink granite formations to hidden beaches with water so clear you can see the anchor on the sand 10 metres below. Multiple swimming stops. Local seafood lunch.",
     included:["Full-day boat tour from Palau","Multiple beach stops (skipper's choice)","All snorkel equipment","Freshly prepared on-board lunch","Skipper and experienced crew"] },
 
@@ -95,22 +95,22 @@ const PRODUCTS = [
 
   { id:18, name:"Sitka's Ultimate Wildlife Boat Tour", price:250.00, category:"experience", region:"USA", filter:"coast", imgId:"photo-1535591273668-578e31182c4f", stars:4.8, reviews:167, days:1, group:"Up to 20",
     shortDesc:"Alaska's premier wildlife boat tour from Sitka. Brown bears fishing for salmon, bald eagles overhead, humpback whales breaching in Frederick Sound.",
-    longDesc:"Sitka sits at the intersection of the open Pacific and the protected Inside Passage — one of North America's richest wildlife zones. On this 3-hour tour your naturalist guide works the radio with other captains to locate active bear fishing, eagle perches, and whale pods. September coincides with both the salmon run and humpback congregation.",
+    longDesc:"Sitka sits at the intersection of the open Pacific and the protected Inside Passage, one of North America's richest wildlife zones. On this 3-hour tour your naturalist guide works the radio with other captains to locate active bear fishing, eagle perches, and whale pods. September coincides with both the salmon run and humpback congregation.",
     included:["3-hour wildlife boat tour from Sitka","Certified naturalist guide","High-quality binoculars","Rain gear provided","Hot beverages throughout"] },
 
   { id:19, name:"Napali Coast Boat Tour and Snorkeling", price:210.00, category:"experience", region:"USA", filter:"tropic", imgId:"photo-1483168527879-c66136b56105", stars:4.9, reviews:493, days:1, group:"Up to 36",
     shortDesc:"Witness Kauai's Napali Coast sea cliffs from the water while snorkeling Hawaii's most pristine marine environment. The most dramatic coastline in the Pacific.",
-    longDesc:"The Napali Coast is roadless and trailless — the only way to see it properly is from the sea. Sheer cathedral cliffs rise 1,200 metres directly from the surf. Spinner dolphins ride your bow wave. Below the surface, green sea turtles and reef sharks patrol around coral formations. Your deli lunch on deck as you drift below the cliffs is the best meal you will ever eat.",
+    longDesc:"The Napali Coast is roadless and trailless. The only way to see it properly is from the sea. Sheer cathedral cliffs rise 1,200 metres directly from the surf. Spinner dolphins ride your bow wave. Below the surface, green sea turtles and reef sharks patrol around coral formations. Your deli lunch on deck as you drift below the cliffs is the best meal you will ever eat.",
     included:["Snorkel gear for all guests","Coast Guard certified vessel","Captain and crew","Deli lunch on deck","Sea cave exploration where safe","Spinner dolphin encounters"] },
 
   { id:20, name:"Private Waikiki Sunset Boat Tour", price:300.00, category:"experience", region:"USA", filter:"coast", imgId:"photo-1559532851-4d5e3d7af63f", stars:4.8, reviews:213, days:1, group:"Up to 6",
-    shortDesc:"Watch the Honolulu sunset from the water on a private charter — Diamond Head glowing gold, city lights coming on, champagne in hand. Pure Hawaiian magic.",
-    longDesc:"This is how Honolulu is supposed to be experienced. Your private vessel departs Magic Island as the sun begins its descent behind the Waianae Mountains. The captain holds position in the golden channel between Diamond Head and the Waikiki skyline for the peak 15 minutes of colour — then slowly circles back as the city sparkles to life below you.",
+    shortDesc:"Watch the Honolulu sunset from the water on a private charter. Diamond Head glowing gold, city lights coming on, champagne in hand. Pure Hawaiian magic.",
+    longDesc:"This is how Honolulu is supposed to be experienced. Your private vessel departs Magic Island as the sun begins its descent behind the Waianae Mountains. The captain holds position in the golden channel between Diamond Head and the Waikiki skyline for the peak 15 minutes of colour, then slowly circles back as the city sparkles to life below you.",
     included:["2-hour private charter","Champagne and Hawaiian snacks","Licensed captain","Sunset photo positioning","Diamond Head and Waikiki route","Up to 6 guests"] },
 
   { id:21, name:"Private Crystal River Wildlife Boat Tour", price:250.00, category:"experience", region:"USA", filter:"coast", imgId:"photo-1500370010411-c01200a7e712", stars:4.8, reviews:178, days:1, group:"Up to 4",
     shortDesc:"Explore Florida's Crystal River by private boat and snorkel with wild manatees in the warm spring waters of Kings Bay Wildlife Refuge.",
-    longDesc:"Kings Bay is fed by 40 natural springs maintaining a constant 72°F — which is why manatees gather here in their hundreds every winter. Your private pontoon boat navigates the refuge's channels with a certified guide who has spent years reading the behaviour of these gentle giants. Wetsuit and snorkel gear included. Capacity: up to 4 guests.",
+    longDesc:"Kings Bay is fed by 40 natural springs maintaining a constant 72°F, which is why manatees gather here in their hundreds every winter. Your private pontoon boat navigates the refuge's channels with a certified guide who has spent years reading the behaviour of these gentle giants. Wetsuit and snorkel gear included. Capacity: up to 4 guests.",
     included:["Private pontoon boat (up to 4 guests)","Wetsuit and snorkel gear included","Certified in-water guide","National Wildlife Refuge permit","90-minute on-water experience"] },
 
   { id:22, name:"For the Love of Travel Gift Card", priceFrom:20, priceTo:2000, denominations:[20,50,100,200,500,1000,2000], category:"giftcard", region:"Global", filter:"gift", imgId:"photo-1488085061387-422e29b40080", stars:5.0, reviews:892,
@@ -134,7 +134,7 @@ const PRODUCTS = [
     included:["Email delivery","Marriott Bonvoy 30-brand portfolio","7,000+ properties","Combine with Bonvoy points","Use for dining and spa"] },
 
   { id:26, name:"Airbnb Gift Card", priceFrom:10, priceTo:500, denominations:[10,25,50,100,200,500], category:"giftcard", region:"Global", filter:"gift", imgId:"photo-1502672260266-1c1ef2d93688", stars:4.9, reviews:621,
-    shortDesc:"Stay anywhere in the world. From beach houses to city apartments — the gift of freedom to stay your way, anywhere Airbnb operates.",
+    shortDesc:"Stay anywhere in the world. From beach houses to city apartments. The gift of freedom to stay your way, anywhere Airbnb operates.",
     longDesc:"The gift of choice. Airbnb gift cards work for stays, Airbnb Experiences, and Adventures globally. Redeem in over 220 countries and regions. Codes never expire.",
     included:["Instant email delivery","Valid for stays and Experiences","Available in 220+ countries","Never expires","No additional fees"] },
 
@@ -152,52 +152,52 @@ const PRODUCTS = [
 /* ============ DATA: ARTICLES ============ */
 const ARTICLES = [
   { id:"a1", tag:"Guides", title:"The Hidden Tools Frequent Travelers Use to Save Hundreds", date:"April 2025", imgId:"photo-1531366936337-7c912a4589a7",
-    excerpt:"Frequent travelers know that the key to consistent savings lies in the tools they use — not just the destinations they pick. From cashback apps to travel gift cards, here's what road warriors actually use.",
+    excerpt:"Frequent travelers know that the key to consistent savings lies in the tools they use, not just the destinations they pick. From cashback apps to travel gift cards, here's what road warriors actually use.",
     body:[
-      "Most travelers focus on finding the cheapest flight or hotel, but the real savers are working a different angle entirely: stacking discounts on top of whatever rate they book. The base rate is just the starting point — and the gap between casual and seasoned travelers can easily run into thousands of dollars per year.",
+      "Most travelers focus on finding the cheapest flight or hotel, but the real savers are working a different angle entirely: stacking discounts on top of whatever rate they book. The base rate is just the starting point, and the gap between casual and seasoned travelers can easily run into thousands of dollars per year.",
       "Cashback apps like Fluz, Rakuten, and Honey are the first layer. These don't reduce the headline price, but they redirect a percentage of every transaction back to you in the form of credit or cash. Stack a 6% Fluz cashback on a Hotels.com gift card on top of a 10% off promo, and you're already 16% ahead before you book.",
-      "The second layer is gift card arbitrage. Buying discounted gift cards from brands like Delta, Marriott, or Airbnb — then using them to pay for actual travel — adds another 5–15% in real savings. Sites like WanderPro now sell these cards directly, often paired with cashback offers.",
-      "The third and most overlooked layer is loyalty stacking. Pay with a credit card that offers travel multipliers, route the booking through your loyalty program, and combine those points with promo codes. The frequent traveler's playbook is rarely about finding the cheapest deal — it's about layering five savings streams on the same purchase."
+      "The second layer is gift card arbitrage. Buying discounted gift cards from brands like Delta, Marriott, or Airbnb, then using them to pay for actual travel, adds another 5–15% in real savings. Sites like WanderPro now sell these cards directly, often paired with cashback offers.",
+      "The third and most overlooked layer is loyalty stacking. Pay with a credit card that offers travel multipliers, route the booking through your loyalty program, and combine those points with promo codes. The frequent traveler's playbook is rarely about finding the cheapest deal. It's about layering five savings streams on the same purchase."
     ] },
   { id:"a2", tag:"Deals", title:"Why Gift Cards Are the Smartest Way to Pay for Travel", date:"March 2025", imgId:"photo-1488085061387-422e29b40080",
     excerpt:"Paying for flights and hotels with gift cards unlocks cashback opportunities most travelers don't know exist. We break down exactly how to stack savings on your next trip.",
     body:[
-      "Gift cards have been quietly outperforming traditional payment methods for travel for years. Most people associate them with birthday presents — but for travelers in the know, they're a primary booking currency. Here's why.",
+      "Gift cards have been quietly outperforming traditional payment methods for travel for years. Most people associate them with birthday presents, but for travelers in the know, they're a primary booking currency. Here's why.",
       "Brands like Delta, Marriott, Airbnb, and Hotels.com routinely offer their gift cards through third-party retailers at 5–15% off face value. Buy a $500 Delta gift card for $450, then book a $500 flight with it, and you've effectively scored a 10% discount on a fare that wasn't otherwise discounted. This works on every Delta flight, every day of the year.",
       "Stack this with cashback apps and the math gets even better. Fluz, for example, offers cashback on travel gift card purchases. Buy a discounted Hotels.com card through Fluz, get 6% additional cashback, and you're now 16% under the headline rate before any other promo code is applied.",
-      "The ultimate strategy is to build a small reserve of gift cards across the brands you use most. Wait for promos, buy in volume when discounts spike, and pay for trips out of your reserve. Frequent travelers who do this consistently save 15–25% on a year's worth of travel — without ever changing where they go."
+      "The ultimate strategy is to build a small reserve of gift cards across the brands you use most. Wait for promos, buy in volume when discounts spike, and pay for trips out of your reserve. Frequent travelers who do this consistently save 15–25% on a year's worth of travel, without ever changing where they go."
     ] },
   { id:"a3", tag:"Top 10", title:"Best Boat Tours in the USA You've Never Heard Of", date:"February 2025", imgId:"photo-1506905925346-21bda4d32df4",
-    excerpt:"Forget the obvious tourist cruises. These 10 under-the-radar boat tours across America are genuinely world-class — from Alaska's fjords to Florida's crystal springs.",
+    excerpt:"Forget the obvious tourist cruises. These 10 under-the-radar boat tours across America are genuinely world-class, from Alaska's fjords to Florida's crystal springs.",
     body:[
-      "Everyone knows about the Statue of Liberty cruise. We're not interested in those. The boat tours below are the ones taken by people who already live in coastal towns — the local secrets that finally got too good to keep.",
-      "Hells Canyon Jet Boat Tour (Idaho) tops the list — North America's deepest river gorge, accessible only by jet boat or on foot. The Snake River runs Class IV rapids past 8,000-foot canyon walls and Nez Perce petroglyphs. There's no road in. There's barely a way out. It's the closest thing the lower 48 has to a true wilderness experience by water.",
-      "Crystal River Manatee Tours (Florida) — Kings Bay holds the largest concentration of manatees in the world. From November through March, these gentle giants gather in the 72°F spring-fed waters. Private snorkel tours let you slip into the river with them. It is the closest most people will ever get to a wild marine mammal.",
+      "Everyone knows about the Statue of Liberty cruise. We're not interested in those. The boat tours below are the ones taken by people who already live in coastal towns. The local secrets that finally got too good to keep.",
+      "Hells Canyon Jet Boat Tour (Idaho) tops the list: North America's deepest river gorge, accessible only by jet boat or on foot. The Snake River runs Class IV rapids past 8,000-foot canyon walls and Nez Perce petroglyphs. There's no road in. There's barely a way out. It's the closest thing the lower 48 has to a true wilderness experience by water.",
+      "Crystal River Manatee Tours (Florida): Kings Bay holds the largest concentration of manatees in the world. From November through March, these gentle giants gather in the 72°F spring-fed waters. Private snorkel tours let you slip into the river with them. It is the closest most people will ever get to a wild marine mammal.",
       "Other standouts include Sitka's Wildlife Boat Tour (where bears, eagles, and humpbacks all show up in the same afternoon), the Napali Coast cruise on Kauai (sea cliffs that rise 1,200 metres straight out of the surf), and Miami's nighttime city lights tour (the Miami you actually came to see). Each one is worth flying for."
     ] },
   { id:"a4", tag:"Guides", title:"How to Plan a Family Boat Tour Without the Stress", date:"January 2025", imgId:"photo-1559494007-9f5847c49d94",
     excerpt:"Travelling with kids on a boat tour doesn't have to be complicated. We cover everything from picking the right tour length to what to pack for a full day on the water.",
     body:[
-      "Family boat tours can be the highlight of a trip — or a logistical disaster. The difference is preparation. Most issues that derail a family on the water are predictable, and almost all of them are solvable in advance.",
-      "Tour length is the single biggest variable. Half-day tours work for kids 5 and up. Full-day tours work for ages 8 and up — but only if there's structured activity (snorkeling, wildlife spotting) rather than open ocean cruising. Sunset and city-lights tours are great for all ages because they're typically 90 minutes or less.",
+      "Family boat tours can be the highlight of a trip, or a logistical disaster. The difference is preparation. Most issues that derail a family on the water are predictable, and almost all of them are solvable in advance.",
+      "Tour length is the single biggest variable. Half-day tours work for kids 5 and up. Full-day tours work for ages 8 and up, but only if there's structured activity (snorkeling, wildlife spotting) rather than open ocean cruising. Sunset and city-lights tours are great for all ages because they're typically 90 minutes or less.",
       "Pack list essentials: SPF 50+ reef-safe sunscreen, a wide-brim hat for every family member, a long-sleeved rash guard for kids (sunburn under reflected water is brutal), motion sickness wristbands or chewables (Bonine over Dramamine for kids), and waterproof bags for phones and snacks.",
-      "Best family-friendly destinations: Crystal River for younger kids (calm spring water, slow manatees), Vestmannaeyjar for older kids (puffins, sea caves, RIB boats), and Venice for everyone (canals, no waves, history). Skip open-ocean whale watching with anyone under 8 — the swell will end the trip in tears."
+      "Best family-friendly destinations: Crystal River for younger kids (calm spring water, slow manatees), Vestmannaeyjar for older kids (puffins, sea caves, RIB boats), and Venice for everyone (canals, no waves, history). Skip open-ocean whale watching with anyone under 8. The swell will end the trip in tears."
     ] },
   { id:"a5", tag:"Top 10", title:"Top 5 Whale Watching Destinations in the World", date:"December 2024", imgId:"photo-1568430462989-44163eb1752f",
-    excerpt:"Norway, Hawaii, Iceland, Mexico, and New Zealand — the five places on earth where whale watching consistently delivers the goods. Here's when to go and what to expect.",
+    excerpt:"Norway, Hawaii, Iceland, Mexico, and New Zealand: the five places on earth where whale watching consistently delivers the goods. Here's when to go and what to expect.",
     body:[
       "Whale watching is among the most weather-dependent activities in travel. The difference between a great location in the right season and the wrong season is the difference between fluke-slapping orcas at the bow and a four-hour empty ocean tour. Here's where to go, when, and why.",
-      "Skjervøy, Norway (November–February): Humpbacks and orcas concentrate in the fjords north of Tromsø to feed on Norwegian spring herring. The density is unmatched globally — bubble-net feeding by groups of 30+ humpbacks happens regularly. Pair with northern lights for a once-in-a-lifetime trip.",
-      "Maui, Hawaii (December–April): The North Pacific humpback population's primary breeding ground. Expect hundreds of individuals in the Auau Channel, breaches every few minutes, and warm sunshine throughout. Best for first-time whale watchers — the conditions and visibility are forgiving.",
-      "Other top picks: Húsavík, Iceland (May–September) for blue whales and minkes; Baja California, Mexico (January–March) for grey whale calving lagoons where babies come to your boat; and Kaikoura, New Zealand (year-round) for resident sperm whales — the only year-round near-guaranteed whale destination on this list."
+      "Skjervøy, Norway (November–February): Humpbacks and orcas concentrate in the fjords north of Tromsø to feed on Norwegian spring herring. The density is unmatched globally. Bubble-net feeding by groups of 30+ humpbacks happens regularly. Pair with northern lights for a once-in-a-lifetime trip.",
+      "Maui, Hawaii (December–April): The North Pacific humpback population's primary breeding ground. Expect hundreds of individuals in the Auau Channel, breaches every few minutes, and warm sunshine throughout. Best for first-time whale watchers; the conditions and visibility are forgiving.",
+      "Other top picks: Húsavík, Iceland (May–September) for blue whales and minkes; Baja California, Mexico (January–March) for grey whale calving lagoons where babies come to your boat; and Kaikoura, New Zealand (year-round) for resident sperm whales, the only year-round near-guaranteed whale destination on this list."
     ] },
   { id:"a6", tag:"Deals", title:"Travel Gift Cards: The Perfect Gift for Any Occasion", date:"November 2024", imgId:"photo-1544551763-46a013bb70d5",
     excerpt:"Can't decide what to get someone who has everything? A travel experience gift card is personal, flexible, and exciting. Here's our guide to choosing the right one.",
     body:[
-      "Travel gift cards have quietly become the most-given non-cash gift in the US. Why? They're personal — the recipient chooses the trip — but flexible enough that you can't get it wrong. Here's how to pick the right card for the right person.",
-      "For the unfocused dreamer who hasn't picked a destination: TripGift or our own For the Love of Travel card. Both work across hundreds of brands and let the recipient apply them however they want — flights, hotels, experiences, or all three.",
+      "Travel gift cards have quietly become the most-given non-cash gift in the US. Why? They're personal (the recipient chooses the trip) but flexible enough that you can't get it wrong. Here's how to pick the right card for the right person.",
+      "For the unfocused dreamer who hasn't picked a destination: TripGift or our own For the Love of Travel card. Both work across hundreds of brands and let the recipient apply them however they want, whether that's flights, hotels, experiences, or all three.",
       "For the brand loyalist: pick the brand. A Marriott Bonvoy member will get more value from a Marriott gift card stacked with their points than from a generic card. Same for Delta SkyMiles members and Delta cards. Match the gift to the loyalty program they already work.",
-      "Personalising the gift: pair a generic travel card with a small physical item — a destination guidebook for a place they've mentioned, a packing cube set, a pair of compact binoculars. The card becomes the spark, the physical item becomes the prompt. It's a far more thoughtful gift than a card alone."
+      "Personalising the gift means pairing a generic travel card with a small physical item: a destination guidebook for a place they've mentioned, a packing cube set, a pair of compact binoculars. The card becomes the spark, the physical item becomes the prompt. It's a far more thoughtful gift than a card alone."
     ] }
 ];
 
@@ -233,7 +233,7 @@ function navigate(page, opts={}){
   const hash = page + (opts.id ? ':'+opts.id : '');
   if(window.location.hash.replace('#','') !== hash) window.location.hash = hash;
   window.scrollTo({top:0,behavior:'instant'});
-  // Active nav link — sub-pages light up their parent
+  // Active nav link: sub-pages light up their parent
   const activeKey = NAV_PARENT[page] || page;
   document.querySelectorAll('.nav-link, .mobile-menu a').forEach(l=>l.classList.toggle('active', l.dataset.page===activeKey));
   // Reveal observer for new content
@@ -342,7 +342,7 @@ function destCardHTML(p){
       <div class="meta">
         <h3>${p.name}</h3>
         <div class="row"><span>${p.region}</span><span class="price">From $${Math.round(p.price||p.priceFrom)}</span></div>
-        <div class="stars-row" style="margin-top:6px;color:var(--gold)">★★★★★ <span style="color:#cbd5e1;margin-left:6px">${p.stars} · ${p.reviews}+ reviews</span></div>
+        <div class="stars-row" style="margin-top:6px;color:var(--gold)">★★★★★ <span style="color:#cbd5e1;margin-left:6px">${p.stars}</span></div>
       </div>
     </div>`;
 }
@@ -367,7 +367,7 @@ function pkgCardHTML(p){
         <div class="pkg-meta">
           <span class="pm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ${p.days||1} day${(p.days||1)>1?'s':''}</span>
           <span class="pm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11a4 4 0 10-8 0 4 4 0 008 0z"/><path d="M2 22a10 10 0 0120 0"/></svg> ${p.group||'Small group'}</span>
-          <span class="pm" style="color:var(--gold)">★ ${p.stars} <span style="color:var(--muted)">(${p.reviews})</span></span>
+          <span class="pm" style="color:var(--gold)">★ ${p.stars}</span>
         </div>
         <ul class="pkg-incl">${(p.included||[]).slice(0,4).map(x=>`<li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>${x}</li>`).join('')}</ul>
         <div class="pkg-foot">
@@ -429,7 +429,7 @@ function productCardHTML(p){
       </div>
       <div class="pc-body">
         <h3 onclick="navigateToProduct(${p.id})">${p.name}</h3>
-        <div class="pc-stars"><span class="gold">★</span> ${p.stars} <span>(${p.reviews})</span></div>
+        <div class="pc-stars"><span class="gold">★</span> ${p.stars}</div>
         ${priceHTML}
         <button class="add-cart" data-pid="${p.id}" onclick="${p.category==='giftcard'?`navigateToProduct(${p.id})`:`addToCartFromBtn(this,${p.id})`}">${btnLabel}</button>
       </div>
@@ -519,7 +519,7 @@ function renderProduct(){
         <span class="tag-pill ${tagClass}">${tagLabel}</span>
       </div>
       <h1 class="pdp-title">${p.name}</h1>
-      <div class="pdp-stars"><span class="gold">★★★★★</span> <b style="color:#fff">${p.stars}</b> · ${p.reviews} reviews</div>
+      <div class="pdp-stars"><span class="gold">★★★★★</span> <b style="color:#fff">${p.stars}</b></div>
       ${priceHTML}
       <div class="pdp-divider"></div>
       <p class="pdp-desc">${p.shortDesc}</p>
@@ -546,14 +546,14 @@ function renderProduct(){
         </div>
         <div class="pkg-body">
           <h3>${r.name}</h3>
-          <div class="pkg-meta"><span class="pm" style="color:var(--gold)">★ ${r.stars} <span style="color:var(--muted)">(${r.reviews})</span></span></div>
+          <div class="pkg-meta"><span class="pm" style="color:var(--gold)">★ ${r.stars}</span></div>
           <p style="color:#c8d3e3;font-size:13px;line-height:1.5;margin:0;flex:1">${r.shortDesc.slice(0,120)}…</p>
           <div class="pkg-foot"><span class="rating"><b>Email delivery</b></span><button class="book">View →</button></div>
         </div></article>`;
     }
     return pkgCardHTML(r);
   }).join('');
-  // Tab handlers — bind once, reset state on each render
+  // Tab handlers: bind once, reset state on each render
   document.querySelectorAll('.pdp-tab').forEach(t=>t.classList.toggle('active', t.dataset.tab==='overview'));
   if(!window._pdpTabsBound){
     window._pdpTabsBound = true;
@@ -571,7 +571,7 @@ function renderPdpTab(){
   const el = document.getElementById('pdpTabContent');
   if(!el) return;
   if(pdpState.tab==='overview'){
-    el.innerHTML = `<p>${p.longDesc}</p><p>${p.region==='Global'?'Delivered electronically with full tracking and confirmation. Use across our extensive travel partner network — from boutique boat tours to global airline brands.':`Set against the natural beauty of ${p.region}, this experience is operated by an established local provider with a long safety record and deep regional knowledge. Bookings are confirmed within 24 hours of receipt.`}</p>`;
+    el.innerHTML = `<p>${p.longDesc}</p><p>${p.region==='Global'?'Delivered electronically with full tracking and confirmation. Use across our travel partner network, from boutique boat tours to global airline brands.':`Set against the natural beauty of ${p.region}, this experience is operated by an established local provider with a long safety record and deep regional knowledge. Bookings are confirmed within 24 hours of receipt.`}</p>`;
   } else if(pdpState.tab==='included'){
     el.innerHTML = `<ul class="pdp-incl-list">${p.included.map(x=>`<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>${x}</li>`).join('')}</ul>`;
   } else {
@@ -917,12 +917,12 @@ function renderStep(){
         ${lineRows}
         <div style="display:flex;justify-content:space-between"><span style="color:var(--muted)">Travelers</span><b>${bookingCtx.data.travelers}</b></div>
         <div style="display:flex;justify-content:space-between"><span style="color:var(--muted)">Departure</span><b>${bookingCtx.data.date||'TBD'}</b></div>
-        <div style="display:flex;justify-content:space-between"><span style="color:var(--muted)">Lead traveler</span><b>${bookingCtx.data.name||'—'}</b></div>
+        <div style="display:flex;justify-content:space-between"><span style="color:var(--muted)">Lead traveler</span><b>${bookingCtx.data.name||'TBD'}</b></div>
         <div style="display:flex;justify-content:space-between"><span style="color:var(--muted)">Reference</span><b>${ref}</b></div>
         <hr style="border:0;border-top:1px dashed var(--line);margin:6px 0"/>
         <div style="display:flex;justify-content:space-between;font-size:18px"><span>Total</span><b style="color:var(--accent);font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:.04em">$${total ? total.toFixed(2) : 'TBD'}</b></div>
       </div>
-      <p style="color:var(--muted);font-size:12.5px;margin:0">Free cancellation up to 14 days before departure. We'll hold your spot — no payment until 30 days out.</p>`;
+      <p style="color:var(--muted);font-size:12.5px;margin:0">Free cancellation up to 14 days before departure. We'll hold your spot. No payment until 30 days out.</p>`;
     back.style.visibility = 'visible';
     next.textContent = 'Confirm Booking';
   }
@@ -940,9 +940,9 @@ document.getElementById('nextBtn').addEventListener('click',()=>{
     closeModal();
     if(bookingCtx.mode==='cart'){
       cart = []; saveCart(); updateCartBadge(); renderCart();
-      showToast('Booking requested — check your email!');
+      showToast('Booking requested. Check your email.');
     } else {
-      showToast('Booking confirmed — check your email!');
+      showToast('Booking confirmed. Check your email.');
     }
   }
 });
